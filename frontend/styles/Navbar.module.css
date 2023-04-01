@@ -1,0 +1,105 @@
+/* Navbar */
+.container {
+    height: 70px; /* Tinggi navbar */
+    padding: 0px 50px; /* Padding setiap item 0 atsa 50 kanan */
+    background-color: #292828; /* Warna navbar */ 
+    color: white; /* Warna text */
+    display: flex; /* Item akan ke samping */
+    align-items: center; /* Item akan center (ditengah)*/
+    justify-content: space-between; /* Memberikan jarak antar item/contrent*/
+    position: sticky; /* akan mengikuti scroll */
+    top: 0;
+    z-index: 999;
+  }
+
+/* Item Navbar */
+  /* Item kiri*/
+  .item {
+    flex: 1; /* Membuiat flex-grow*/
+    display: flex; /* Item akan ke samping */
+    align-items: center; /* posisi tengah */
+  }
+  
+  /* Item tengah */ 
+  .item:nth-child(2) {
+    flex: 3; /* Mengikuti posisi item artas*/
+  }
+  
+    /* Item kanan */ 
+  .item:last-child { /* Mengikuti posisi item artas*/
+    justify-content: flex-end; /* Flex akhir */
+  }
+
+/* Text order */
+  /* Text */
+  .texts {
+    font-weight: 800; /* Ketebalan tulisan*/
+    margin-left: 20px; /* Jarak kiri */
+    color: white; /* Warna */
+  }
+  
+  /* Text order now */
+  .text:first-child {
+    font-size: 12px; /* Ukuran huruf*/
+    font-weight: 500; /* Ketebalan tulisan*/
+  }
+  
+  /* No */
+  .text:last-child {
+    font-size: 20px; /* Ukuran huruf*/
+    font-weight: bold; /* Ketebalan tulisan*/
+  }
+  
+/* List Menu */
+  /* list */
+  .list {
+    padding: 0; /* Jarak sekitar */
+    display: flex; /* Sejajar kesamping */
+    align-items: center; /* Posisi item */
+    list-style: none; /* none style */
+    color: white; /* Warna item */
+  }
+  
+  /* Logo */
+  .logo{
+    font-weight: bolder; /* Ketebalan tulisan*/
+    margin: 50px; /* Jarak kiri */
+    font-size: 30px;  /* Ukuran huruf */
+  }
+
+  /* List Item */
+  .listItem {
+    margin: 10px; /* Ukuran huruf */
+    font-weight: 500;  /* Ketebalan tulisan*/
+  }
+  
+  /* Image cart */
+  .cart{
+      position: relative; /* Wadah sebagai jumlah pembelian*/
+  }
+  
+  .counter{
+      position: absolute; /* Menumpuk */
+      top: -10px;
+      right: -10px;
+      width: 10px; /* lebar logo*/
+      height: 10px; /* tingi logo*/
+      border-radius: 50%; /* Border jumlah pembelian */
+      background-color: white; /* Background pembelian */
+      padding: 3px; /* jarak sekitar */
+      display: flex; /* lebar logo*/
+      align-items: center; /* posisi tengah */
+      justify-content: center; /* posisi tengah */
+      font-weight: bold;  /* Ketebalan tulisan*/
+      color: black; /* warna */
+  }
+  
+  @media screen and (max-width:480px) {
+    .item:nth-child(2) {
+      display: none;
+    }
+  
+    .item:nth-child(1) {
+      flex: 3;
+    }
+  }
